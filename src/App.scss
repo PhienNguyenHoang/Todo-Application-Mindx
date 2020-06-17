@@ -1,0 +1,26 @@
+@import './styles/config';
+@import './styles/buttons';
+
+.Navbar-wrapper {
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(#8566aa, #6983aa);
+  display: flex;
+  justify-content: space-between;
+}
+.Navbar-wrapper a {
+  padding: 0px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+.Navbar-search-container {
+  margin-right: 16px;
+}
+.Header-wrapper {
+  text-align: center;
+}
+Body h2{
+  text-align: center;
+}
