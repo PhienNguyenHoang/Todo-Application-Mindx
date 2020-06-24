@@ -25,6 +25,7 @@ function App() {
     }
   return (
     <div>
+      <p>hello</p>
       <Header />
       <input value={inputValue} onChange={onChange} placeholder = "Add a todo.." onKeyPress={keyPress}/>
       <button onClick={onAddItem}>Add</button>
