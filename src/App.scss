@@ -23,12 +23,7 @@
 Body h2{
   text-align: center;
 }
-.img{
-  background-image: url("./assets/picture.jpg");
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-}
+
 .ul{
   list-style: none;
 }
@@ -73,4 +68,8 @@ $gray: #9b9b9b;
 /* demo */
 .container {
   text-align: center;
+  background-image: url("./assets/picture.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
 }
