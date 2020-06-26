@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import './App.scss';
+import "./App.scss";
 
-import Todolist2 from './components/Todolist2';
+import Todolist2 from "./components/Todolist2";
 
 import picture from './assets/picture.jpg';
 
@@ -10,30 +10,45 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const keyPress = (e) => {
-    if(e.keyCode == 13){
+    if (e.keyCode === 13) {
       onAddItem();
     }
-  }
+  };
   const onChange = (e) => {
     setInputValue(e.target.value);
-  }
+  };
   const onAddItem = () => {
-    setTodos([...todos,inputValue]);
-    setInputValue("");
-  }
+    if (inputValue) {
+      setTodos([...todos, inputValue]);
+      setInputValue("");
+    }
+  };
   const removeItem = (itemIndex) => {
-    const filterTodos = todos.filter(function(_, index) {
+    const filterTodos = todos.filter(function (_, index) {
       return index !== itemIndex;
     });
     setTodos(filterTodos);
-    }
+  };
   return (
-    <div class="img">
-      <input value={inputValue} onChange={onChange} placeholder = "Add a todo.." onKeyPress={keyPress}/>
-      <button onClick={onAddItem}>Add</button>  
-      <Todolist2 todos={todos} removeItem = {removeItem} />
+    <div className="container">
+      <div className="flex">
+        <div className="field">
+          <input
+            size="10"
+            value={inputValue}
+            onChange={onChange}
+            placeholder="Add a todo.."
+            onKeyPress={keyPress}
+            className="form__field"
+            name="name"
+            id="name"
+            required
+          />
+        </div>
+        <button onClick={onAddItem}>Add</button>
+      </div>
+      <Todolist2 todos={todos} removeItem={removeItem} />
     </div>
-  
   );
 }
 
