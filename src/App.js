@@ -32,9 +32,8 @@ function App() {
   return (
     <div className="container">
       <div className="flex">
-        <div className="field">
+        <div>
           <input
-            size="10"
             value={inputValue}
             onChange={onChange}
             placeholder="Add a todo.."

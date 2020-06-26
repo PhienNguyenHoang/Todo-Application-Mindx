@@ -30,10 +30,9 @@ Body h2{
 .flex{
     display: flex;
     justify-content: center;
+    margin-top: 300px;
   }
-.field{
-  width: 30%;
-}
+
 $primary: #11998e;
 $secondary: #38ef7d;
 $white: #fff;
@@ -72,4 +71,5 @@ $gray: #9b9b9b;
   width: 100vw;
   height: 100vh;
   background-size: cover;
+  overflow: hidden;
 }
