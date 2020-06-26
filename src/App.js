@@ -4,6 +4,8 @@ import './App.scss';
 
 import Todolist2 from './components/Todolist2';
 
+import picture from './assets/picture.jpg';
+
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -26,13 +28,11 @@ function App() {
     setTodos(filterTodos);
     }
   return (
-    <div>
-      <img></img>
+    <div class="img">
       <input value={inputValue} onChange={onChange} placeholder = "Add a todo.." onKeyPress={keyPress}/>
-      <button onClick={onAddItem}>Add</button>
+      <button onClick={onAddItem}>Add</button>  
       <Todolist2 todos={todos} removeItem = {removeItem} />
     </div>
- 
   
   );
 }

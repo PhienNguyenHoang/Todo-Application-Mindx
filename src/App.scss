@@ -23,3 +23,12 @@
 Body h2{
   text-align: center;
 }
+.img{
+  background-image: url("./assets/picture.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+.ul{
+  list-style: none;
+}
