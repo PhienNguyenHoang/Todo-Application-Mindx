@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import Header from './components/Header';
+
 import './App.scss';
+
 import Todolist2 from './components/Todolist2';
+
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -26,7 +28,6 @@ function App() {
   return (
     <div>
       <img></img>
-      <Header />
       <input value={inputValue} onChange={onChange} placeholder = "Add a todo.." onKeyPress={keyPress}/>
       <button onClick={onAddItem}>Add</button>
       <Todolist2 todos={todos} removeItem = {removeItem} />
