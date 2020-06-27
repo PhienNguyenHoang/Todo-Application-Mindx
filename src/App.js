@@ -8,8 +8,9 @@ import Todolist2 from "./components/Todolist2";
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+
   const keyPress = (e) => {
-    if (e.keyCode === 13) {
+    if (e.key ==='Enter') {
       onAddItem();
     }
   };
