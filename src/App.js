@@ -8,6 +8,8 @@ import Todolist2 from "./components/Todolist2";
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [done, setDone] = useState([]);
+
 
   const keyPress = (e) => {
     if (e.key ==='Enter') {
@@ -24,10 +26,17 @@ function App() {
     }
   };
   const removeItem = (itemIndex) => {
+   
+    const filterDone = todos.filter(function (_, index) {
+      return index === itemIndex;
+    });
     const filterTodos = todos.filter(function (_, index) {
       return index !== itemIndex;
     });
     setTodos(filterTodos);
+    console.log(todos);
+    setDone([...done, filterDone]);
+    setTimeout(() => console.log(done), 3000);
   };
   return (
     <div className="container">

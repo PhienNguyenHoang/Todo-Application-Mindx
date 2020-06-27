@@ -15,10 +15,7 @@ function Todoitem(props) {
                 <div className="li-button">
                     <button onClick = {() => {removeItem(index)}}>X</button>
                 </div>
-               
            </div>
-    
     );
-
 }
 export default Todoitem;
