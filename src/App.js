@@ -4,7 +4,6 @@ import "./App.scss";
 
 import Todolist2 from "./components/Todolist2";
 
-import picture from './assets/picture.jpg';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -31,7 +30,7 @@ function App() {
   };
   return (
     <div className="container">
-      <div className="flex">
+      <div className="flex-input">
         <div>
           <input
             value={inputValue}
@@ -44,7 +43,7 @@ function App() {
             required
           />
         </div>
-        <button onClick={onAddItem}>Add</button>
+        <button className="button" onClick={onAddItem}>Add</button>
       </div>
       <Todolist2 todos={todos} removeItem={removeItem} />
     </div>

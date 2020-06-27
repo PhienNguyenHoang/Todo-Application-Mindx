@@ -1,4 +1,13 @@
 
+:root {
+  --background: #E5FFB3;
+  --background-accent: #DBF8A3;
+  --background-accent-2: #BDE66E;
+  --light: #92DE34;
+  --dark: #69BC22;
+  --text: #025600;
+}
+
 
 .Navbar-wrapper {
   align-items: center;
@@ -27,12 +36,32 @@ Body h2{
 .ul{
   list-style: none;
 }
-.flex{
+li{
+  font-size: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+.flex-input{
     display: flex;
     justify-content: center;
     margin-top: 300px;
   }
-
+.flex-todoItem{
+  display: flex;
+  margin-bottom: 30px;
+  margin-left: 550px;
+  width: 600px;
+}
+.li-container {
+  margin-left: -50px;
+  width: 250px;
+}
+.flex-todoItem button{
+  width: 30px;
+}
+.li-button {
+  margin-left: 300px;
+}
 $primary: #11998e;
 $secondary: #38ef7d;
 $white: #fff;
@@ -71,5 +100,65 @@ $gray: #9b9b9b;
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  overflow: hidden;
+  overflow: scroll;
 }
+
+// .bouncy{
+//   animation: bouncy 3s infinite linear;
+//   position: relative;
+//   }
+// @keyframes bouncy {
+//   0%{top:0em}
+//   40%{top:0em}
+//   43%{top:-0.9em}
+//   46%{top:0em}
+//   48%{top:-0.4em}
+//   50%{top:0em}
+//   100%{top:0em}
+// }
+.button {
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #92DE34;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #025600;
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px #92DE34 inset;
+}
+
+.button:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    var(--dark) 10% 20%,
+    transparent 20% 30%,
+    var(--dark) 30% 40%,
+    transparent 40% 50%,
+    var(--dark) 50% 60%,
+    transparent 60% 70%,
+    var(--dark) 70% 80%,
+    transparent 80% 90%,
+    var(--dark) 90% 100%
+  );
+  animation: background 5s linear infinite;
+}
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.todoList-container{
+  margin-right: 300px;
+}
+
+html { overflow-y: scroll; overflow-x:hidden; }
+body { position: absolute; }

@@ -8,7 +8,7 @@ function Todolist2(props) {
         <Todoitem todo = {todo} key = {index} index = {index} removeItem = {removeItem}/>
     ));
     return(
-        <div>
+        <div className="todoList-container">
             <ul className="ul">
                 {list}
             </ul>
