@@ -29,7 +29,7 @@
 .Header-wrapper {
   text-align: center;
 }
-Body h2{
+Body h1{
   text-align: center;
 }
 
@@ -37,15 +37,26 @@ Body h2{
   list-style: none;
 }
 li{
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-align: left;
   color: white;
 }
-.flex-input{
+.flex-input-outer{
     display: flex;
     justify-content: center;
     margin-top: 300px;
+  }
+  .flex-input-inner {
+    display: flex;
+    justify-content: space-evenly;
+    background: none;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 30px;
+    height: 50px;
+    width: 400px;
+  
   }
 .flex-todoItem{
   display: flex;
@@ -64,8 +75,8 @@ li{
 .li-button {
   margin-left: 90px;
 }
-$primary: #11998e;
-$secondary: #38ef7d;
+$primary: palevioletred;
+$secondary: pink;
 $white: #fff;
 $gray: #9b9b9b;
 
@@ -76,11 +87,14 @@ $gray: #9b9b9b;
   border-bottom: 2px solid $gray;
   outline: 0;
   font-size: 1.3rem;
-  color: black;
+  color:white;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
 
+}
+::placeholder {
+  color: #979291;
 }
 
 .form__field:focus {
@@ -119,18 +133,20 @@ $gray: #9b9b9b;
 //   100%{top:0em}
 // }
 .button {
+  margin-top: 5px;
   cursor: pointer;
-  width: 150px;
+  text-align: center;
+  width: 100px;
   height: 40px;
   outline: none;
   border: none;
-  background-color: #92DE34;
+  background-color: palevioletred;
   border-radius: 30px;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #025600;
+  color: white;
   background-size: 100% 100%;
-  box-shadow: 0 0 0 7px #92DE34 inset;
+  box-shadow: 0 0 0 7p palevioletred inset;
 }
 
 .button:hover {
