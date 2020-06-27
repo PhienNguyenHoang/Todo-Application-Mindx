@@ -38,8 +38,9 @@ Body h2{
 }
 li{
   font-size: 30px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: left;
+  color: white;
 }
 .flex-input{
     display: flex;
@@ -48,7 +49,7 @@ li{
   }
 .flex-todoItem{
   display: flex;
-  margin-bottom: 30px;
+  margin-top: 30px;
   margin-left: 550px;
   width: 600px;
 }
@@ -60,7 +61,7 @@ li{
   width: 30px;
 }
 .li-button {
-  margin-left: 300px;
+  margin-left: 90px;
 }
 $primary: #11998e;
 $secondary: #38ef7d;
