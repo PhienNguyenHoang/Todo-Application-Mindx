@@ -10,7 +10,10 @@ function Todolist2(props) {
     return(
         <div className="todoList-container">
             <ul className="ul">
-                {list}
+                <div>
+                    {list}
+                </div>
+                
             </ul>
         </div>
     );

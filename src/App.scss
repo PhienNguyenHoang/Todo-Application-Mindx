@@ -89,6 +89,14 @@ li{
   margin-left: 100px;
   margin-top: 15px;
 }
+.li-button button {
+  border-radius: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  background: none;
+  border-style: none;
+  color: white;
+}
 $primary: palevioletred;
 $secondary: pink;
 $white: #fff;
@@ -182,3 +190,4 @@ $gray: #9b9b9b;
 
 html { overflow-y: scroll; overflow-x:hidden; }
 body { position: absolute; }
+
