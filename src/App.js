@@ -10,7 +10,7 @@ function App() {
   const [inputValue, setInputValue] = useState("");
 
   const keyPress = (e) => {
-    if (e.key ==='Enter') {
+    if (e.key === 'Enter') {
       onAddItem();
     }
   };
@@ -31,20 +31,22 @@ function App() {
   };
   return (
     <div className="container">
-      <div className="flex-input">
-        <div>
-          <input
-            value={inputValue}
-            onChange={onChange}
-            placeholder="Add a todo.."
-            onKeyPress={keyPress}
-            className="form__field"
-            name="name"
-            id="name"
-            required
-          />
+      <div className="flex-input-outer">
+        <div className="flex-input-inner">
+          <div>
+            <input
+              value={inputValue}
+              onChange={onChange}
+              placeholder="Add a todo.."
+              onKeyPress={keyPress}
+              className="form__field"
+              name="name"
+              id="name"
+              required
+            />
+          </div>
+          <button className="button" onClick={onAddItem}>ADD</button>
         </div>
-        <button className="button" onClick={onAddItem}>Add</button>
       </div>
       <Todolist2 todos={todos} removeItem={removeItem} />
     </div>
