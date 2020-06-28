@@ -4,7 +4,7 @@ import "./App.scss";
 
 import Todolist2 from "./components/Todolist2";
 
-
+import Navbar from './components/Navbar';
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -40,6 +40,7 @@ function App() {
   };
   return (
     <div className="container">
+      <Navbar />
       <div className="flex-input-outer">
         <div className="flex-input-inner">
           <div>

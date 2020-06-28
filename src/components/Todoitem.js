@@ -3,7 +3,6 @@ import "../App.scss";
 
 function Todoitem(props) {
   const { todo, index, removeItem } = props;
-
   return (
     <div className="flex-todoItem">
       <div className="li-button-container">
