@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./App.scss";
 
-import Todolist2 from "./components/Todolist2";
+import TodoList from "./components/TodoList";
 
 import Navbar from "./components/Navbar";
 
@@ -64,7 +64,7 @@ function App() {
           </button>
         </div>
       </div>
-      <Todolist2 todos={todos} removeItem={removeItem} />
+      <TodoList todos={todos} removeItem={removeItem} />
     </div>
   );
 }
