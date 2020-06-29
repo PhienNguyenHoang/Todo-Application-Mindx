@@ -4,15 +4,15 @@ import "./App.scss";
 
 import Todolist2 from "./components/Todolist2";
 
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
+
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [done, setDone] = useState([]);
-
 
   const keyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       onAddItem();
     }
   };
@@ -26,7 +26,6 @@ function App() {
     }
   };
   const removeItem = (itemIndex) => {
-   
     const filterDone = todos.filter(function (_, index) {
       return index === itemIndex;
     });
@@ -34,17 +33,22 @@ function App() {
       return index !== itemIndex;
     });
     setTodos(filterTodos);
-    console.log(todos);
-    setDone([...done, filterDone]);
-    setTimeout(() => console.log(done), 3000);
   };
   return (
     <div className="container">
-      <Navbar />
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+      <div className="slogan">
+        <h1>Pin your work</h1>
+        <h2>Get it done</h2>
+      </div>
+
       <div className="flex-input-outer">
         <div className="flex-input-inner">
           <div>
             <input
+              autoComplete="off"
               value={inputValue}
               onChange={onChange}
               placeholder="Add a todo.."
@@ -55,7 +59,9 @@ function App() {
               required
             />
           </div>
-          <button className="button" onClick={onAddItem}>ADD</button>
+          <button className="button" onClick={onAddItem}>
+            ADD
+          </button>
         </div>
       </div>
       <Todolist2 todos={todos} removeItem={removeItem} />

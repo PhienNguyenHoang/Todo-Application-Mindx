@@ -1,12 +1,15 @@
-import React from 'react';
-import '../App.scss';
+import React from "react";
+import "../App.scss";
+import { Link } from "react-router-dom";
 function Navbar() {
-    return(
-        <div className="Navbar-wrapper">
-            <a href="#" className="logo">TODO</a>
-            <a href="#">Home</a>
-            <a href="#">Home</a>
-        </div>
-    );
+  return (
+    <div className="Navbar-wrapper">
+      <Link to="/" className="logo">
+        <a>
+          TODO
+        </a>
+      </Link>
+    </div>
+  );
 }
 export default Navbar;
